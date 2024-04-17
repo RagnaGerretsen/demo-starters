@@ -1,0 +1,55 @@
+openapi: 3.0.2
+info:
+  title: "Drink service"
+  description: "Allows consumers of the API to create a drink"
+  version: 1.0.0
+servers:
+  - url: dummy
+    description: "Test url"
+
+tags:
+  - name: drink
+    description: "Drink client API"
+paths:
+  /drinks/{drink}:
+    post:
+      tags:
+        - drink
+      operationId: createDrink
+      parameters:
+        - name: drink
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        200:
+          description: Successfully retrieved search results
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CreatedDrink'
+        400:
+          description: "Bad request"
+        500:
+          description: "Server error"
+
+components:
+  schemas:
+    CreatedDrink:
+      type: object
+      properties:
+        drink:
+          type: string
+          description: 'Name of the drink'
+        colour:
+          type: string
+          description: 'The colour of the drink'
+        drinkType:
+          $ref: '#/components/schemas/DrinkType'
+    DrinkType:
+      type: "string"
+      enum:
+        - wine
+        - cocktail
+        - beer
