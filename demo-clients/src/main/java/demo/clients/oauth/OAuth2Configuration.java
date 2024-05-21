@@ -1,4 +1,4 @@
-package demo.library.oauth;
+package demo.clients.oauth;
 
 import com.microsoft.aad.msal4j.ClientCredentialFactory;
 import com.microsoft.aad.msal4j.ConfidentialClientApplication;
@@ -29,7 +29,6 @@ public class OAuth2Configuration {
 
     private final AzureAdOAuth2Properties azureAdOauth2Properties;
 
-    //TODO: where is this used??
     @Bean(name = BEAN_NAME)
     @Profile("!local")
     public ConfidentialClientApplication getConfidentialClientApplication() {

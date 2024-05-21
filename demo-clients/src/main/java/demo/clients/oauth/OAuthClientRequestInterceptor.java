@@ -1,4 +1,4 @@
-package demo.library.oauth;
+package demo.clients.oauth;
 
 import com.microsoft.aad.msal4j.IAuthenticationResult;
 import feign.RequestInterceptor;

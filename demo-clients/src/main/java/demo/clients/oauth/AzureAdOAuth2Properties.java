@@ -1,4 +1,4 @@
-package demo.library.oauth;
+package demo.clients.oauth;
 
 import jakarta.annotation.Nonnull;
 import org.springframework.boot.context.properties.ConfigurationProperties;

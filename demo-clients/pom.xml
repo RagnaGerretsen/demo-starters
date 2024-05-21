@@ -3,10 +3,10 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>demo-library</artifactId>
+    <artifactId>demo-clients</artifactId>
 
-    <name>demo-library</name>
-    <description>demo-library</description>
+    <name>demo-clients</name>
+    <description>demo-clients</description>
 
     <parent>
         <groupId>demo.starters</groupId>
@@ -89,7 +89,7 @@
             <plugin>
                 <groupId>org.openapitools</groupId>
                 <artifactId>openapi-generator-maven-plugin</artifactId>
-                <version>6.5.0</version>
+                <version>7.5.0</version>
                 <executions>
                     <execution>
                         <!-- Client API -->
@@ -100,12 +100,12 @@
                         <configuration>
                             <inputSpec>${project.basedir}/contracts/openapi/drink.yml</inputSpec>
                             <generatorName>spring</generatorName>
-                            <apiPackage>demo.library.drink.api</apiPackage>
-                            <modelPackage>demo.library.domain</modelPackage>
+                            <apiPackage>demo.clients.drink.api</apiPackage>
+                            <modelPackage>demo.clients.domain</modelPackage>
                             <generateSupportingFiles>false</generateSupportingFiles>
                             <configOptions>
-                                <basePackage>demo.library</basePackage>
-                                <configPackage>demo.library.client.config.drink</configPackage>  <!-- you need to manually create ClientConfiguration.java -->
+                                <basePackage>demo.clients</basePackage>
+                                <configPackage>demo.clients.client.config.drink</configPackage>  <!-- you need to manually create ClientConfiguration.java -->
                                 <library>spring-cloud</library>
                                 <java17>true</java17>
                                 <useSpringBoot3>true</useSpringBoot3>

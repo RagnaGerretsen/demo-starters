@@ -1,7 +1,7 @@
-package demo.library.client.config.drink;
+package demo.clients.client.config.drink;
 
-import demo.library.oauth.OAuth2ClientCredentialGrant;
-import demo.library.oauth.OAuthClientRequestInterceptor;
+import demo.clients.oauth.OAuth2ClientCredentialGrant;
+import demo.clients.oauth.OAuthClientRequestInterceptor;
 import feign.RequestInterceptor;
 import lombok.Getter;
 import lombok.extern.slf4j.Slf4j;
